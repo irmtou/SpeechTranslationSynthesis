@@ -4,8 +4,6 @@ from translate import Translator
 import os
 
 os.environ["COQUI_TOS_AGREED"] = "1"
-# # Set the TTS_TOS environment variable
-# os.environ["TTS_TOS"] = "non-commercial"
 
 # Loading the base model
 model = whisper.load_model("base")
