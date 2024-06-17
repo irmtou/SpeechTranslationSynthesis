@@ -31,7 +31,6 @@ def translate(text, language):
     translated_text = translator.translate(text)
     return translated_text
 
-
 # Initialize TTS model outside the function to avoid reinitialization on each call
 from TTS.api import TTS
 
@@ -76,7 +75,7 @@ language_dropdown = gr.Dropdown(choices=zip(language_names, language_options),
 translate_button = gr.Button(value="Synthesize and Translate my Voice!")
 transcribed_text = gr.Textbox(label="Transcribed Text")
 output_text = gr.Textbox(label="Translated Text")
-output_speech = gr.Audio(label="Translated Speech", type="filepath")
+output_speech = gr.Audio(label="Synthesized Audio", type="filepath")
 
 # Gradio interface with the transcribe function as the main function
 demo = gr.Interface(
@@ -84,10 +83,11 @@ demo = gr.Interface(
     inputs=[gr.Audio(sources=["upload", "microphone"],
                      type="filepath",
                      format='wav',
+                     # value="Original Audio",
                      show_download_button=True,
                      waveform_options=gr.WaveformOptions(
                          waveform_color="#01C6FF",
-                         waveform_progress_color="FF69B4",
+                         waveform_progress_color="#FF69B4",
                          skip_length=2,
                          show_controls=False,
                      )
@@ -95,7 +95,11 @@ demo = gr.Interface(
             language_dropdown],
     outputs=[transcribed_text, output_text, output_speech],
     theme=gr.themes.Soft(),
-    title="Speech-to-Speech Translation (Demo)"
+    title="Speech Translation Synthesis",
+    description="This speech-to-speech translator uses the Whisper model for speech-to-text "
+                "transcription, the translate library for translation, and the Coqui TTS model for text-to-speech "
+                "synthesis.",
+    allow_flagging="never"
 )
 
 demo.launch(debug=True, share=True)

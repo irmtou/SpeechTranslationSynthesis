@@ -1,12 +1,9 @@
----
-title: speechtranslationsynthesis
-app_file: app.py
-sdk: gradio
-sdk_version: 4.36.1
----
-# Speech Translation Synthesis: A Speech-To-Speech Translator
+# Speech Translation Synthesis
+### A Speech-To-Speech Translator
 
-This project was one of the projects for SDSU's Artificial Intelligence Club for the Spring 2024 semester. It's a Gradio-based demo that performs speech-to-speech translation. It uses the Whisper model for speech-to-text transcription, the `translate` library for translation, and the Coqui TTS model for text-to-speech synthesis. 
+SDSU's Artificial Intelligence Club Group Project Spring 2024 semester
+
+This is a Gradio-based demo that performs speech-to-speech translation. It uses the Whisper model for speech-to-text transcription, the `translate` library for translation, and the Coqui TTS model for text-to-speech synthesis. 
 
 ## Features
 - Transcribe speech from an audio file or microphone input
@@ -55,8 +52,8 @@ This project was one of the projects for SDSU's Artificial Intelligence Club for
 - **translate(text, language)**: Translates the transcribed text into the target language.
 - **s2s(audio, language)**: Combines the transcription and translation functions, then synthesizes the translated text into speech using the input speaker's voice.
 
-### Supported Languages
-- Arabic
+### Supported Languages 🗣️
+- Arabic 
 - Portuguese
 - Chinese
 - Czech
@@ -73,10 +70,11 @@ This project was one of the projects for SDSU's Artificial Intelligence Club for
 - Hungarian
 - Hindi
 
-## License
+## License 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ## Acknowledgements
+- SDSU's Artificial Intelligence Club for giving us the idea.
 - [Gradio](https://www.gradio.app/) for providing the easy-to-use interface library.
 - [Whisper](https://github.com/openai/whisper) for the speech-to-text model.
 - [Coqui TTS](https://github.com/coqui-ai/TTS) for the text-to-speech synthesis model.
