@@ -1,12 +1,14 @@
 ---
-title: {{Speech Translation Synthesis}}
-emoji: {{🗣️}}
-colorFrom: {{green}}
-colorTo: {{indigo}}
-sdk: {{gradio}}
-sdk_version: "{{4.36.1}}"
+title: Speech Translation Synthesis
+emoji: 🗣️
+colorFrom: green
+colorTo: indigo
+sdk: gradio
+sdk_version: 4.36.1
 app_file: app.py
 pinned: true
+models:
+   - coqui/XTTS-v2
 ---
 
 # Speech Translation Synthesis
