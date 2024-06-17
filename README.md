@@ -3,7 +3,7 @@
 
 SDSU's Artificial Intelligence Club Group Project Spring 2024 semester
 
-This is a Gradio-based demo that performs speech-to-speech translation. It uses the Whisper model for speech-to-text transcription, the `translate` library for translation, and the Coqui TTS model for text-to-speech synthesis. 
+This isa Gradio-based demo that performs speech-to-speech translation. It uses the Whisper model for speech-to-text transcription, the `translate` library for translation, and the Coqui TTS model for text-to-speech synthesis. 
 
 ## Features
 - Transcribe speech from an audio file or microphone input
